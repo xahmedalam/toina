@@ -1,7 +1,9 @@
+import Hero from "./components/Hero";
+
 export default function App() {
   return (
     <main>
-      <h1 className="text-5xl">Toina</h1>
+      <Hero />
     </main>
   );
 }
