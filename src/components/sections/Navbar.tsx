@@ -1,26 +1,26 @@
 import { Link } from "react-router";
-import Logo from "../assets/Logo";
+import Logo from "../../assets/Logo";
 
 const links: TLink[] = [
   {
     label: "HOME",
-    href: "/",
+    slug: "/",
   },
   {
     label: "SHOP",
-    href: "/shop",
+    slug: "/shop",
   },
   {
     label: "CATEGORIES",
-    href: "/categories",
+    slug: "/categories",
   },
   {
     label: "BEST SELLERS",
-    href: "/best-sellers",
+    slug: "/best-sellers",
   },
   {
     label: "ABOUT US",
-    href: "/about",
+    slug: "/about",
   },
 ];
 
@@ -35,7 +35,7 @@ export default function Navbar() {
           {links.map((link) => (
             <Link
               key={link.label}
-              to={link.href}
+              to={link.slug}
               className="mr-5 text-gray-300 hover:text-foreground transition-colors"
             >
               {link.label}

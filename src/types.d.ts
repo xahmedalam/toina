@@ -1,4 +1,10 @@
 type TLink = {
   label: string;
-  href: string;
+  slug: string;
+};
+
+type TCategoryLink = {
+  label: string;
+  imgUrl: string;
+  slug: string;
 };

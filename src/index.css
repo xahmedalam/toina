@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #141412;
-  --color-foreground: #ffffff;
-  --color-primary: #ecaa31;
-  --color-primary-foreground: #250000;
   --font-display: "Fredoka", sans-serif;
   --font-display--font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   --font-display--font-variation-settings: "opsz" 32;
+  --color-background: #141412;
+  --color-foreground: #ffffff;
+  --color-background-2: #f9c275;
+  --color-foreground-2: #141412;
+  --color-primary: #ecaa31;
+  --color-primary-foreground: #250000;
 }
 
 html {
@@ -47,11 +49,17 @@ html {
   body {
     @apply bg-background text-foreground font-display font-normal;
   }
+
+  h1,
+  h2,
+  h3 {
+    @apply uppercase;
+  }
 }
 
 @layer utilities {
   .btn {
-    @apply inline-flex items-center bg-foreground text-background border-0 py-2 px-4 outline-foreground outline-1 focus:outline-1 outline-offset-2 hover:opacity-80 transition-opacity rounded-full text-base font-semibold mt-4 md:mt-0 cursor-pointer;
+    @apply w-fit inline-flex items-center bg-foreground text-background border-0 py-2 px-4 outline-foreground outline-1 focus:outline-1 outline-offset-2 hover:opacity-80 transition-opacity rounded-full text-base font-semibold mt-4 md:mt-0 cursor-pointer uppercase;
   }
 
   .btn-black {
