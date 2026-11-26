@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import StarSvg from "../../assets/StarSvg";
 import { products } from "../../products";
+import { formatNumberTo_K_M } from "../../lib/utils";
 
 export default function ExploreProducts() {
   function getPercentage(ratingStars: number) {
@@ -46,7 +47,7 @@ export default function ExploreProducts() {
                           </span>
                         </span>
                         <span>{ratingStars}</span>
-                        <span className="text-primary">{`(${ratings})`}</span>
+                        <span className="text-primary">{`(${formatNumberTo_K_M(ratings)})`}</span>
                       </span>
                       <p className="text-lg font-medium">${priceUsd}</p>
                     </div>
